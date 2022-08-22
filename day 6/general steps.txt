@@ -1,0 +1,14 @@
+Make a API calls 
+	1 From the view - this is fast and lightweight, but less secure
+		the entire code gets visible to user in a browser
+	2 from Model - this is very secure
+		steps	
+		a. create a new Model file with all the properties which 
+			you want to capture from incoming data
+		b. create a method whcih will return
+			a. List<ModelClass>
+				or
+			b. ModelClass
+
+		c. Add a nuget package 
+		Microsoft.AspNet.WebApi.Client
