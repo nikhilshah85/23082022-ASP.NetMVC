@@ -1,0 +1,79 @@
+MVC
+Entity Framework - SQL Server
+WebAPI - rest api
+DI - Dependency Inction
+services, middleware
+Security - oAuth - Identity framework
+
+----------------------------------------------------------
+Pre-req
+	1. OOPS
+	2. HTML, CSS and JS
+Software 
+	Visual Studio 2019 or above
+	SQL Server 2012 or above with SSMS
+either ur own system or cloud lab
+-----------------------------------------------------
+Goals
+you should be a good MVC developer
+
+---------------------------------------------------
+Be interactive
+
+
+
+
+
+
+
+
+			MVC 
+
+		Model - (.cs file) - Data part of application
+			CRUD operations
+			Formatting the data, Filter, sort, grouping, validation of data etc......
+		View - (.cshtml file) - HTML, CSS, JS, Bootstrap, 
+			Razor syntax - Short hand HTML, css and JS
+			Web API calls - client side 
+		Controller - (.cs file)
+			Cordination between view and model
+			
+			listen to request and send the response
+			collect data from model, pass it to view
+			collect data from view, pass it to model
+
+			security, sessions, caching, routing etc...
+
+	------------------------------------------------------------------------------------------------------------
+		As a developer we would be intrested to see, how they commuication
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

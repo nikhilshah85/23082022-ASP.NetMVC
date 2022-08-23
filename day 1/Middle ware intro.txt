@@ -1,0 +1,19 @@
+Middle ware - 
+ASP.Net MVC core is very light weight by default
+
+ASP.Net MVC Core is Modular
+	a appliction is created with very minial configuration
+
+
+Based on every project requirement, teams want to want to add
+more features, this features are available as methods 
+eg. 
+	.AddAuthentication()
+	.AddAuthorization()
+	.AddCors()
+	.AddLogging()
+
+This feature is called as Middleware in MVC
+
+they are small components which will handle request as per your configuration
+(ISAPI filters in previous version)
