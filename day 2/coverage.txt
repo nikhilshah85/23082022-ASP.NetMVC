@@ -1,0 +1,11 @@
+Today : Model + View + Controller
+
+	have a communication between them
+
+	In Memory collection - display the same on the page
+
+------------------------------------
+	communiction between a controller and View
+
+		Controller to view - ViewBag - property of a page 
+		View to controller - form 

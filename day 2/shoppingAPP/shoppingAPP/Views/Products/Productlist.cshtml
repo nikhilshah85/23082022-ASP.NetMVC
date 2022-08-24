@@ -1,0 +1,44 @@
+﻿
+
+<h1> Products Coming Soon </h1>
+
+<h3> Total Products : @ViewBag.count</h3>
+
+
+<ul>
+@foreach(var item in @ViewBag.products)
+{
+    <li> @item </li>
+}
+</ul>
+
+
+<form method="POST">
+    <input type="text" placeholder="Enter New Product Name" class="form-control" name="newProduct"/>
+    <button type="submit" class="btn btn-primary">Add Product </button>
+</form>
+
+
+
+
+
+
+
+
+
+
+@*
+<select>
+    @foreach(var item in @ViewBag.products)
+        {
+            <option> @item </option>
+        }
+    </select>*@
+
+ @*   <span>
+        @foreach(var item in @ViewBag.products)
+        {
+            <input type="checkbox" />@item
+        }
+
+    </span>*@
