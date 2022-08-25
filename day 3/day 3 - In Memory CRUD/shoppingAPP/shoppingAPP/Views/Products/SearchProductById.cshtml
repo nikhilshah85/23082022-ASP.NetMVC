@@ -1,0 +1,19 @@
+﻿
+
+
+<form method="POST">
+    <input type="number" placeholder="Enter Product Id" class="form-control" name="productId" />
+    <button class="btn btn-primary"> Search </button>
+</form>
+
+@if (ViewBag.product != null)
+{
+   <div>
+    <h3> Product Id :  @ViewBag.product.pId </h3>
+    <h3> Product Name :  @ViewBag.product.pName </h3>
+    <h3> Product Category :  @ViewBag.product.pCategory </h3>
+    <h3> Product Price :  @ViewBag.product.pPrice </h3>
+    <h3> Product Is In Stock ? :  @ViewBag.product.pIsInStock </h3>
+</div>
+}
+

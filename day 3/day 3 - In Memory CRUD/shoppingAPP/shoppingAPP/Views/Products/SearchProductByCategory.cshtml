@@ -1,0 +1,45 @@
+﻿
+
+<form method="POST">
+    <select name="productCategory" class="form-control">
+        <option> Cold-Drink </option>
+        <option> Electronics </option>
+    </select>
+
+    <button class="btn btn-info"> Get Products</button>
+</form>
+
+<table class="table">   
+    @if (ViewBag.productByCategory != null)
+    {
+
+
+
+        @foreach (var item in ViewBag.productByCategory)
+        {
+
+            @if (item.pIsInStock)
+            {
+                <tr>
+                    <td> @item.pId </td>
+                    <td> @item.pName </td>
+                    <td> @item.pPrice </td>
+                    <td> @item.pCategory </td>
+                    <td> @item.pIsInStock </td>
+                </tr>
+            }
+            else
+            {
+                <tr style="background-color:orangered">
+                    <td> @item.pId </td>
+                    <td> @item.pName </td>
+                    <td> @item.pPrice </td>
+                    <td> @item.pCategory </td>
+                    <td> @item.pIsInStock </td>
+                </tr>
+            }
+
+        }
+
+    }
+</table>
