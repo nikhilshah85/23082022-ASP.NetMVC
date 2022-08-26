@@ -1,0 +1,101 @@
+From in memory collection towards the database operations
+
+1. EntityFrameworCore with SQL Server and have a CRUD operations on ASP.net MVC
+
+------------------------------------------------------------------------------------------------------
+
+1. Create a new database, add a new table with some records
+	(Note: you need to have a primary key to work with EF Core)
+2. Createa a new ASP.Net MVC Core Application - shoppingAPP
+3. EF core does not come with default - as .net core is Modular in nature 
+	Thus we will have to add nuget packages for EF
+	
+	Right click on project - Manage Nuget Package
+	click on browse - Install below 4 packages
+
+		Microsoft.EntityFrameworkCore.Design
+		Microsoft.EntityFrameworkCore.Tools
+		Microsoft.EntityFrameworkCore
+		Microsoft.EntityFrameworkCore.SqlServer
+
+	Build the app
+
+4. We need to create Model class - for every table you will have a class, and for every column you will have a property
+
+	from tools -> Nuget package manager - Console
+
+	Scaffold-DbContext " Connection string " -outPutDir Model\EF -Provider  Microsoft.EntityFrameworkCore.SqlServer
+
+	SQL Server Auth
+	Scaffold-DbContext "server=WIN8\NIKHILINSTANCE; database=shoppingAPPDB; user id=sa; password=Password1234" -OutputDir Models		\EF -Provider Microsoft.EntityFrameworkCore.SqlServer
+
+	Windows Auth
+	Scaffold-DbContext "server=WIN8\NIKHILINSTANCE; database=shoppingAPPDB;integrated security=true" -OutputDir Models\EF -		Provider Microsoft.EntityFrameworkCore.SqlServer
+
+	Check the models folder, it will have file created - 1 file for every table and 1 DBContext file which will have all the able 	and their details
+
+5. Build the application, create a new MVC controller with EF
+	right click on controller folder - add controller
+	MVC Controller with Entity Framework
+	from the window, choose tablename and DBContext class
+	change the name of controller if needed, click add
+
+6. This will create the controller for your with the CRUD operation methods
+	- we need to modify 1 thing here, by default it uses DI - dependency injection 
+
+	-so from controller, initiate new object of the DBContext class and comment out the consructor
+7. All the views are also creaed for you in the view folder
+
+8. update the layout page
+
+9. build and run the applicaiton, you can perform all the CRUD with your database 
+
+
+10. add a new table customers
+
+11. repeat steps 5,6,7,8 for the new table
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
