@@ -1,0 +1,34 @@
+﻿
+
+
+<script>
+
+    function getPhotos()
+    {
+
+        fetch('https://jsonplaceholder.typicode.com/photos').then( res => res.json())
+                                                            .then( data => {
+                                                                for(var i=0;i<data.length;i++)
+                                                                {
+                                                                    $("table").append("<tr>" +
+                                                                    "<td>" + data[i].id + "</td>" +
+                                                                    "<td>" + data[i].albumId+ "</td>" +
+                                                                    "<td>" + data[i].title+ "</td>" +
+                                                                    "<td><img src='" + data[i].thumbnailUrl+ "'/></td>"                                                                  
+                                                                   
+                                                                    + "</tr>")
+                                                                }
+                                                            })
+                                                            .catch(err =>{
+                                                                alert('Error, please check with admin');
+                                                                console.log(err);}
+                                                                )
+                                                            .finally( () => alert('Completed the call'));
+
+
+    }
+
+</script>
+
+<button class="btn btn-warning" onclick="getPhotos()"> Get Albums </button>
+<table class="table">  </table>
