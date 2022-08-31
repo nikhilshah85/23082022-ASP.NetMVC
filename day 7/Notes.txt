@@ -1,0 +1,58 @@
+Middleware and Services
+a. DI - dipendency  Injection
+b. Security - oAuth - Identity Framework
+
+---------------------------------------------
+	DI - Dipendency Injection
+
+
+	As developer - do not create any object, let that object be created by framework at runtime and make it avaialble whereever it is needed
+
+
+
+		----------- We create a lot of object. but we never write a destructor code, or dispose methods
+
+			but we never do the same.
+		We also need to share the object at many places, users, controllers etc...
+			Lifecycle of an object needs to programmed
+
+
+		Step 1:  Products _pObj;
+			  public ProductsController(Products _pObjREF)
+		        {
+		            _pObj = _pObjREF;
+		        }
+		step 2: In program.cs
+			Lifecycle of an object
+
+		
+			there are 3 methods given to us
+			a. Percall - so new object will be created on every call, and will be destroyed after process
+				AddTrancient
+			b. PerSession - a new object will be created for every new session, and will be destroyed when session ends
+				AddScoped (10 users, 10 objects)
+			c. Static - an object is created when server starts and object is destroyed when server ends
+				SingleTon
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
